@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Layout</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 4rem;
+  margin-right: 35px;
+  gap: 1rem;  
+  padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.navbar-right{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:0.5rem;  
+}
+
+
+.btn-btn{
+border-radius: 100%;
+color: orange;
+border-color: rgb(254, 252, 248);
+border: #0de7f7 2px solid;
+}
+
+.navbar-right span {
+
+  font-weight: 600;
+  color: goldenrod;
+}
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 12;
+  top: 0px;
+  left: 0;
+  height: 96vh;
+  width: 10%;
+  background-color: #242424;
+  padding: 20px;
+  margin: 12px 20px 20px;
+  border-radius: 10px;
+}
+
+.sidebar h1 {
+  color: #ff6347;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  padding: 10px 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.main-content {
+  position: fixed;
+  right: 20px;
+  width: 87%;
+  padding: 10px;
+  height: 705px;
+  margin: 58px 3px 20px 5px;
+  border-radius: 8px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.earnings-report {
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+  height: 370px;
+}
+
+.google-drive {
+  background: linear-gradient(135deg, #f7b733, #fc4a1a);
+  height: 140px;
+}
+
+.subscribers {
+  background: linear-gradient(135deg, #f05053, #e1eec3);
+  height: 140px;
+}
+
+.loan-balance {
+  background: linear-gradient(135deg, #e53935, #e35d5b);
+  height: 300px;
+}
+
+.news-update {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  height: 210px;
+}
+
+.monthly-orders {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  height: 140px;
+}
+
+.progress-tracker {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  height: 240px;
+}
+
+.members {
+  background: linear-gradient(135deg, #06beb6, #48b1bf);
+  height: 270px;
+}
+
+.reward-bonus {
+  background: linear-gradient(135deg, #f46b45, #eea849);
+  height: 140px;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.9) ;
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="navbar-middle">
+        <i class="fa-regular fa-bell fa-1.5x"></i>
+      </div>
+      <div class="navbar-right">
+        <span>Saumya Sinha</span>
+       <a href="#" class="btn-btn" id="btn-btn" role="button" aria-pressed="true">SS</a>
+      </div>
+    </div>
+ 
+    <div class="container">
+      <div class="sidebar">
+        <h1>LecturaX</h1>
+        <nav>
+          <ul>
+            <li>Dashboard</li>
+            <li>Product</li>
+            <li>UI Elements</li>
+            <li>Pages</li>
+            <li>Forms</li>
+            <li>Graphs</li>
+            <li>Authentication</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-content">
+        <div class="grid-container">
+          <div class="div-1">
+            <div class="card earnings-report">My Analytics</div>
+            <div class="card google-drive">Check Courses</div>
+            <div class="card subscribers">Notifications</div>
+          </div>
+          <div class="div-2">
+            <div class="card loan-balance">Doubt Solving</div>
+            <div class="card news-update">Tests and Results</div>
+            <div class="card monthly-orders">Contact</div>
+          </div>
+          <div class="div-3">
+            <div class="card progress-tracker">Time-Table</div>
+            <div class="card members">Live Classes</div>
+            <div class="card reward-bonus">Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script>
+    document.getElementById('btn-btn').addEventListener('click', (event)=>{
+    event.preventDefault();
+   window.location.href = '/login';
+        
+  });
+  </script>
+  </body>
+</html>
